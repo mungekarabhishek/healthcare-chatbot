@@ -1,5 +1,6 @@
 import uuid
 import gradio as gr
+from langchain_core.messages import HumanMessage
 
 from src.hc_agent_factory import HCAgentFactory
 class HCBots:
@@ -11,12 +12,14 @@ class HCBots:
     def chat_with_agent(self, user_input: str)-> str:
         response = self.agent.invoke(
             {
-                "messages": [
-                    {"role": "user","content": user_input}
-                ]
+                "messages": [HumanMessage(content=user_input)]
             },
             config=self.config
         )
+        
+        state = self.agent.get_state(self.config)
+        if state.next:
+            response = self.agent.invoke(None, config=self.config)
         return response["messages"][-1].content
     
     def respond(self, message, history):
