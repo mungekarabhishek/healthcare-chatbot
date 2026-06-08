@@ -1,5 +1,5 @@
-<img width="1084" height="530" alt="2" src="https://github.com/user-attachments/assets/b25d5c2b-fa3a-476b-891c-20ae2fbeee33" />
 <img width="1904" height="938" alt="1" src="https://github.com/user-attachments/assets/e0bd95fd-2424-496a-9f81-71b0321bf9a8" />
+<img width="1084" height="530" alt="2" src="https://github.com/user-attachments/assets/b25d5c2b-fa3a-476b-891c-20ae2fbeee33" />
 
 # Healthcare Chatbot 🏥
 
